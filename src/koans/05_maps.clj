@@ -43,5 +43,5 @@
      (sort (keys {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"})))
 
   "You can get the values in a similar way"
-  (= (list "Sochi" "Torino" )
+  (= (list "Sochi" "Torino" "Vancouver")
      (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
