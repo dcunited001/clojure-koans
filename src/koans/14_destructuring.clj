@@ -43,4 +43,11 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     (___ ["Test" "Testerson"] test-address)))
+      ((fn [[first-name last-name] 
+           {street-address :street-address city :city state :state}]
+        (clojure.string/join ", " (list 
+                                   (str first-name " " last-name) 
+                                   street-address 
+                                   city 
+                                   state)))
+        ["Test" "Testerson"] test-address)))
